@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Damage Types</title>
+    <style>
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+            .tab-content.active {
+                display: block;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="location.href='index.html'">Back to Home</button>
+    <h1>Damage Type Selector</h1>
+    <select id="tabSelector">
+        <option value="piercing">Piercing</option>
+        <option value="blunt">Blunt</option>
+        <option value="impact">Impact</option>
+        <option value="elemental">Elemental</option>
+        <option value="ice">Ice</option>
+        <option value="lightning">Lightning</option>
+        <option value="poison">Poison</option>
+    </select>
+
+    <div id="piercing" class="tab-content active">
+        <h2>Piercing Damage</h2>
+        <p>Sharp force that penetrates armor or flesh, often from arrows or spears.</p>
+        <table>
+            <tr><th>Tier</th><th>Description</th><th>Damage</th></tr>
+            <tr><td>1</td><td>Light puncture</td><td>5�10</td></tr>
+            <tr><td>2</td><td>Moderate penetration</td><td>11�20</td></tr>
+            <tr><td>3</td><td>Deep, critical hit</td><td>21�30</td></tr>
+        </table>
+    </div>
+
+    <div id="blunt" class="tab-content">
+        <h2>Blunt Damage</h2>
+        <p>Forceful damage from heavy, non-edged weapons like maces or clubs.</p>
+        <table>
+            <tr><th>Tier</th><th>Description</th><th>Damage</th></tr>
+            <tr><td>1</td><td>Bruising blow</td><td>6�12</td></tr>
+            <tr><td>2</td><td>Bone-jarring hit</td><td>13�22</td></tr>
+            <tr><td>3</td><td>Crushing impact</td><td>23�35</td></tr>
+        </table>
+    </div>
+
+    <div id="impact" class="tab-content">
+        <h2>Impact Damage</h2>
+        <p>Damage from high-velocity collisions like falling or being struck by a vehicle.</p>
+        <table>
+            <tr><th>Tier</th><th>Description</th><th>Damage</th></tr>
+            <tr><td>1</td><td>Minor knockback</td><td>8�15</td></tr>
+            <tr><td>2</td><td>Significant force</td><td>16�30</td></tr>
+            <tr><td>3</td><td>Severe trauma</td><td>31�45</td></tr>
+        </table>
+    </div>
+
+    <div id="elemental" class="tab-content">
+        <h2>Elemental Damage</h2>
+        <p>Damage caused by a elemental based attack</p>
+        <table>
+            <tr><th>Tier</th><th>Description</th><th>Damage</th></tr>
+            <tr><td>1</td><td>Tier 1</td><td>4�9</td></tr>
+            <tr><td>2</td><td>Tier 2</td><td>10�18</td></tr>
+            <tr><td>3</td><td>Tier 3</td><td>19�30</td></tr>
+        </table>
+    </div>
+
+    <div id="ice" class="tab-content">
+        <h2>Ice Damage</h2>
+        <p>Cold-based attacks that freeze or slow the target.</p>
+        <table>
+            <tr><th>Tier</th><th>Description</th><th>Damage</th></tr>
+            <tr><td>1</td><td>Chill and frostbite</td><td>3�8</td></tr>
+            <tr><td>2</td><td>Freezing touch</td><td>9�17</td></tr>
+            <tr><td>3</td><td>Shattering cold</td><td>18�28</td></tr>
+        </table>
+    </div>
+
+    <div id="lightning" class="tab-content">
+        <h2>Lightning Damage</h2>
+        <p>Electric shocks that can arc between targets and disrupt nervous systems.</p>
+        <table>
+            <tr><th>Tier</th><th>Description</th><th>Damage</th></tr>
+            <tr><td>1</td><td>Static jolt</td><td>5�11</td></tr>
+            <tr><td>2</td><td>Electrifying strike</td><td>12�23</td></tr>
+            <tr><td>3</td><td>Chain lightning</td><td>24�36</td></tr>
+        </table>
+    </div>
+
+    <div id="poison" class="tab-content">
+        <h2>Poison Damage</h2>
+        <p>Toxic substances that weaken over time or cause progressive damage.</p>
+        <table>
+            <tr><th>Tier</th><th>Description</th><th>Damage</th></tr>
+            <tr><td>1</td><td>Nauseating touch</td><td>2�6</td></tr>
+            <tr><td>2</td><td>Venomous sting</td><td>7�14</td></tr>
+            <tr><td>3</td><td>Lethal dose</td><td>15�25</td></tr>
+        </table>
+    </div>
+
+    <script>
+        const selector = document.getElementById('tabSelector');
+        const tabs = document.querySelectorAll('.tab-content');
+        selector.addEventListener('change', () => {
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(selector.value).classList.add('active');
+        });
+    </script>
+</body>
+</html>

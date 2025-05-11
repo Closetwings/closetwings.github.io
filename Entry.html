@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Access Code</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a3a;
+            color: #fff;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #575757;
+            }
+    </style>
+</head>
+<body>
+    <h1>Enter Your Access Code</h1>
+    <input type="text" id="accessCode" placeholder="Enter code here" autofocus />
+
+    <script>
+        function checkCode() {
+            const code = document.getElementById('accessCode').value.trim().toLowerCase();
+            switch (code) {
+                case 'celestial':
+                    location.href = 'home_Celestial.html';
+                    break;
+                case 'mortem':
+                    location.href = 'home_Mortem.html';
+                    break;
+                case 'lucky':
+                    location.href = 'home_Lucky.html';
+                    break;
+                default:
+                    alert('Invalid code. Try again.');
+            }
+        }
+
+        document.getElementById('accessCode').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                checkCode();
+            }
+        });
+    </script>
+</body>
+</html>
