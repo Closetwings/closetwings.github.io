@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Lucky Home</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .banner {
+            width: 100%;
+            background-color: #1e1e1e;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            border-bottom: 2px solid #3a3a3a;
+        }
+
+            .banner h1 {
+                margin: 0;
+                font-size: 1.8rem;
+            }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-end;
+            padding: 15px 15px 0 0;
+        }
+
+        button {
+            width: 200px;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 0;
+            background-color: #3a3a3a;
+            color: #fff;
+            cursor: pointer;
+            text-align: left;
+        }
+
+            button:hover {
+                background-color: #575757;
+            }
+    </style>
 </head>
 <body>
-    <h1>Welcome Lucky</h1>
-    <button onclick="location.href='damage.html'">Damage Types</button>
-    <button onclick="location.href='skills.html'">Skills</button>
-    <button onclick="location.href='equipment.html'">Equipment</button>
+    <div class="banner">
+        <h1>Welcome Lucky</h1>
+    </div>
+
+    <div class="button-group">
+        <button onclick="location.href='DamageTypes.html'">Damage Types</button>
+        <button onclick="location.href='stats_Lucky.html'">Stats</button>
+        <button onclick="location.href='equipment.html'">Equipment</button>
+    </div>
 </body>
 </html>

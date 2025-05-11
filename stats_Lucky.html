@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stat Sheet</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button {
+            background-color: #2c2c2c;
+            color: #f0f0f0;
+            border: 1px solid #444;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+            button:hover {
+                background-color: #3a3a3a;
+            }
+
+        .stat-sheet {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+        }
+
+        .stat-block {
+            margin-bottom: 20px;
+        }
+
+            .stat-block h2 {
+                border-bottom: 1px solid #444;
+                padding-bottom: 5px;
+                margin-bottom: 10px;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3a3a3a;
+        }
+
+        td {
+            background-color: #2e2e2e;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="window.history.back()">Go Back</button>
+
+    <div class="stat-sheet">
+        <h1>Character Stat Sheet</h1>
+
+        <div class="stat-block">
+            <h2>Core Attributes</h2>
+            <table>
+                <tr><th>Attribute</th><th>Value</th></tr>
+                <tr><td>Strength</td><td>0</td></tr>
+                <tr><td>Dexterity</td><td>0</td></tr>
+                <tr><td>Constitution</td><td>0</td></tr>
+                <tr><td>Intelligence</td><td>0</td></tr>
+                <tr><td>Wisdom</td><td>0</td></tr>
+                <tr><td>Charisma</td><td>0</td></tr>
+            </table>
+        </div>
+
+        <div class="stat-block">
+            <h2>Combat Stats</h2>
+            <table>
+                <tr><th>Stat</th><th>Value</th></tr>
+                <tr><td>Health</td><td>0</td></tr>
+                <tr><td>Armor Class</td><td>0</td></tr>
+                <tr><td>Speed</td><td>0 ft</td></tr>
+                <tr><td>Initiative</td><td>0</td></tr>
+            </table>
+        </div>
+
+</body>
+</html>
